@@ -55,7 +55,7 @@ public class Subscription {
 		udid ?
 		subscriptionId ?
 
-		tabella sottoiscrizioni
+		tabella sottoiscrizioni      
 		tabella dispositivi ( language ? )
 
 		metodo di controllo di token senza sottoiscrizioni
