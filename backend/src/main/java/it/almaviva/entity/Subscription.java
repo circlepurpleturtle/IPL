@@ -31,17 +31,40 @@ public class Subscription {
 	/*            JSON
 
    		{
-    		"os": "Windows",
-    		"dataPartenza": "2018-12-10",
-    		"token": "MyToken",
-    		"nextStop": "",
-   			 "veichleNumber": 11,
+    		"os": "Windows",				!
+    		"token": "MyToken",				!
+			"udid": "MyUdid",
+			"language": "IT",				
+			"veichleType": "bus"			!
+    		"dataPartenza": "2018-12-10",	(1/3!)
     		"subscriptionLength": 0,
-    		"language": "IT",
-    		"udid": "MyUdid",
-    		"veichleType": "bus"
-   		}
-   
+			"veichleNumber": 11,
+    		"nextStop": "",
+		}
+
+		cambiare tipo di veichletype in type
+		cambiare tipo di veichleNumber in object
+		azienda
+		Data inizio - Data fine - Molteplicità - fare controllo per vedere se almeno uno di questi valori è stato riempito
+		versione app
+		key ( nullable ) 
+		controllo dinamico sulla casistica del type
+
+		update ( aggiorna dispositivo/applicazione [ cancella e reinserisce ? ] )
+
+		udid ?
+		subscriptionId ?
+
+		tabella sottoiscrizioni
+		tabella dispositivi ( language ? )
+
+		metodo di controllo di token senza sottoiscrizioni
+		
+
+		Acquisto bliglietto locale
+		------------------- nazionale
+		parcheggio sosta
+		info mobilità periodica ( iscrizione a un solo veicolo )
  */
 	
 	@Id
@@ -52,7 +75,7 @@ public class Subscription {
 	@Column(length = 50, nullable = false )
 	String token;
 	
-	@Column(length = 50, nullable = false)
+	@Column(length = 50)
 	String udid;
 	
 	@Column(name = "veichle_number", nullable = false) 
